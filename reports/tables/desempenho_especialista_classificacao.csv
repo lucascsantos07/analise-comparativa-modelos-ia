@@ -1,0 +1,11 @@
+,Sistema Especialista
+Accuracy,0.8765546686467421
+Precision (Macro),0.5759705286329532
+Recall (Macro),0.678896417233615
+F1-Score (Macro),0.5617998828711855
+Precision (Weighted),0.8935662545570855
+Recall (Weighted),0.8765546686467421
+F1-Score (Weighted),0.8793501818423944
+Precision (High),0.9476883004124159
+Recall (High),0.9601935341983725
+F1-Score (High),0.9538999344548831

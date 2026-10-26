@@ -1,0 +1,100 @@
+Base de conhecimento — Regressão (pontuação aditiva)
+====================================================
+
+Pontuação base: 53
+Limites do escore: 0.0 a 100.0
+
+[RG_G_BAIXA] Glicemia de jejum normal (< 100 mg/dL)
+  Tipo: diretriz
+  SE Fasting_Blood_Sugar < 100
+  ENTÃO PONTOS = -10
+
+[RG_G_PRE] Glicemia de jejum na faixa de pré-diabetes (100–125 mg/dL)
+  Tipo: diretriz
+  SE Fasting_Blood_Sugar maior ou igual a 100 e menor que 126
+  ENTÃO PONTOS = +0
+
+[RG_G_ALTA] Glicemia de jejum em faixa diagnóstica (>= 126 mg/dL)
+  Tipo: diretriz
+  SE Fasting_Blood_Sugar >= 126
+  ENTÃO PONTOS = +10
+
+[RG_H_BAIXA] HbA1c normal (< 5,7%)
+  Tipo: diretriz
+  SE HbA1c < 5.7
+  ENTÃO PONTOS = -9
+
+[RG_H_PRE] HbA1c na faixa de pré-diabetes (5,7–6,4%)
+  Tipo: diretriz
+  SE HbA1c maior ou igual a 5.7 e menor que 6.5
+  ENTÃO PONTOS = +0
+
+[RG_H_ALTA] HbA1c em faixa diagnóstica (>= 6,5%)
+  Tipo: diretriz
+  SE HbA1c >= 6.5
+  ENTÃO PONTOS = +9
+
+[RG_IMC_BAIXO] IMC abaixo de 25 kg/m²
+  Tipo: relacao
+  SE BMI < 25
+  ENTÃO PONTOS = -5
+
+[RG_IMC_SOBREPESO] IMC de sobrepeso (25–29,9 kg/m²)
+  Tipo: relacao
+  SE BMI maior ou igual a 25 e menor que 30
+  ENTÃO PONTOS = -2
+
+[RG_IMC_OBESO1] Obesidade grau I (30–34,9 kg/m²)
+  Tipo: relacao
+  SE BMI maior ou igual a 30 e menor que 35
+  ENTÃO PONTOS = +2
+
+[RG_IMC_OBESO2] Obesidade grau II ou superior (>= 35 kg/m²)
+  Tipo: relacao
+  SE BMI >= 35
+  ENTÃO PONTOS = +5
+
+[RG_IDADE_JOVEM] Idade inferior a 40 anos
+  Tipo: heuristica
+  SE Age < 40
+  ENTÃO PONTOS = -6
+
+[RG_IDADE_ADULTO] Idade entre 40 e 54 anos
+  Tipo: heuristica
+  SE Age maior ou igual a 40 e menor que 55
+  ENTÃO PONTOS = -1
+
+[RG_IDADE_MEIA] Idade entre 55 e 69 anos
+  Tipo: heuristica
+  SE Age maior ou igual a 55 e menor que 70
+  ENTÃO PONTOS = +3
+
+[RG_IDADE_IDOSO] Idade igual ou superior a 70 anos
+  Tipo: heuristica
+  SE Age >= 70
+  ENTÃO PONTOS = +4
+
+[RG_HIST_FAMILIAR] Histórico familiar de diabetes
+  Tipo: relacao
+  SE Family_History_Diabetes = Yes
+  ENTÃO PONTOS = +10
+
+[RG_HIPERTENSAO] Hipertensão arterial
+  Tipo: relacao
+  SE Hypertension = Yes
+  ENTÃO PONTOS = +6
+
+[RG_DIETA_RUIM] Qualidade da dieta ruim
+  Tipo: heuristica
+  SE Diet_Quality = Poor
+  ENTÃO PONTOS = +6
+
+[RG_ATIVIDADE_BAIXA] Nível de atividade física baixo
+  Tipo: heuristica
+  SE Physical_Activity_Level = Low
+  ENTÃO PONTOS = +6
+
+[RG_ATIVIDADE_IGNORADA] Nível de atividade física não informado
+  Tipo: heuristica
+  SE Physical_Activity_Level = Não_informado
+  ENTÃO PONTOS = +2

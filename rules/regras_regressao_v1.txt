@@ -1,0 +1,30 @@
+Base de conhecimento — Regressão v1 (medianas)
+==============================================
+
+[REG1] Risco baixo a moderado — glicemia e HbA1c abaixo das medianas de treino
+  Tipo: heuristica
+  Prioridade: 1
+  SE Fasting_Blood_Sugar < 142.9
+    E HbA1c < 8.5
+  ENTÃO Diabetes_Risk = 64.08649388959124
+
+[REG2] Risco intermediário — glicemia baixa e HbA1c elevada
+  Tipo: heuristica
+  Prioridade: 2
+  SE Fasting_Blood_Sugar < 142.9
+    E HbA1c >= 8.5
+  ENTÃO Diabetes_Risk = 71.40114285714286
+
+[REG3] Risco intermediário — glicemia elevada e HbA1c controlada
+  Tipo: heuristica
+  Prioridade: 3
+  SE Fasting_Blood_Sugar >= 142.9
+    E HbA1c < 8.5
+  ENTÃO Diabetes_Risk = 76.67333472978635
+
+[REG4] Risco alto — glicemia e HbA1c acima das medianas de treino
+  Tipo: heuristica
+  Prioridade: 4
+  SE Fasting_Blood_Sugar >= 142.9
+    E HbA1c >= 8.5
+  ENTÃO Diabetes_Risk = 83.43078393881453

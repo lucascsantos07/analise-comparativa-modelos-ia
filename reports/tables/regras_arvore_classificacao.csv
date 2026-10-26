@@ -1,0 +1,4 @@
+Regra,Folha,Classe,Probabilidade,Amostras,Condições
+ARV1,1459,High,1.0,1958,Fasting_Blood_Sugar > 125.95 E HbA1c > 6.45 E Family_History_Diabetes == Yes E Age > 59.5 E Hypertension != No
+ARV2,35,Low,0.6216216216216216,37,Fasting_Blood_Sugar <= 99.95 E HbA1c <= 5.65 E Family_History_Diabetes != Yes E Age <= 63.5 E BMI > 30.55 E Diet_Quality != Poor E PCOS == No E Hypertension != Yes
+ARV3,1229,Moderate,0.7428571428571429,175,Fasting_Blood_Sugar > 125.95 E HbA1c > 6.45 E Family_History_Diabetes != Yes E Age <= 44.5 E BMI <= 29.95 E Heart_Disease != Yes E PCOS != Yes E Hypertension != Yes E Diet_Quality != Poor

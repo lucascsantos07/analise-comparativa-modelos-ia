@@ -1,0 +1,5 @@
+Modelo,Profundidade,Nós,Folhas
+Classificação — Gini sem poda,25,10355,5178
+Classificação — ajustada,10,1469,735
+Regressão — MSE sem poda,35,69915,34958
+Regressão — ajustada,10,1583,792

@@ -1,0 +1,10 @@
+# Cache e arquivos compilados do Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+.venv/
+venv/
+
+# Modelos treinados
+*.joblib

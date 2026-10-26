@@ -1,0 +1,31 @@
+Base de conhecimento — Classificação (Diabetes_Risk)
+====================================================
+
+[R1] Risco alto — critérios diagnósticos de diabetes (glicemia de jejum e HbA1c elevadas)
+  Tipo: heuristica
+  Prioridade: 1
+  SE Fasting_Blood_Sugar >= 126
+    E HbA1c >= 6.5
+  ENTÃO Diabetes_Risk = High
+
+[R2] Risco moderado — faixa intermediária de glicemia e HbA1c em adultos
+  Tipo: heuristica
+  Prioridade: 2
+  SE Fasting_Blood_Sugar entre 80 e 125
+    E HbA1c entre 5.3 e 7.0
+    E Age < 65
+  ENTÃO Diabetes_Risk = Moderate
+
+[R3] Risco baixo — glicemia e HbA1c abaixo dos limites normais
+  Tipo: heuristica
+  Prioridade: 3
+  SE Fasting_Blood_Sugar < 100
+    E HbA1c < 5.7
+  ENTÃO Diabetes_Risk = Low
+
+[R4] Risco moderado — glicemia normal com HbA1c na faixa de pré-diabetes (marcadores discordantes)
+  Tipo: heuristica
+  Prioridade: 4
+  SE Fasting_Blood_Sugar maior ou igual a 80 e menor que 100
+    E HbA1c maior ou igual a 5.7 e menor que 6.5
+  ENTÃO Diabetes_Risk = Moderate

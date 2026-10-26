@@ -1,0 +1,18 @@
+Feature,Usada nas regras (classificação),Importância RF,Rank RF,Problema,Usada nas regras (regressão)
+Fasting_Blood_Sugar,True,0.3018268336696279,1,Classificação,
+HbA1c,True,0.2036031436837957,2,Classificação,
+BMI,False,0.1543038803862675,3,Classificação,
+Age,True,0.1479083278916712,4,Classificação,
+Family_History_Diabetes,False,0.05205807088432453,5,Classificação,
+Diet_Quality,False,0.0471375690836746,6,Classificação,
+Hypertension,False,0.031576631914218486,7,Classificação,
+Heart_Disease,False,0.031364403513951616,8,Classificação,
+PCOS,False,0.03022113897246837,9,Classificação,
+Fasting_Blood_Sugar,,0.3441252938377156,1,Regressão,True
+HbA1c,,0.21586065826194936,2,Regressão,True
+Age,,0.11649726455786374,3,Regressão,True
+Family_History_Diabetes,,0.10912645781536161,4,Regressão,True
+BMI,,0.10039558055322799,5,Regressão,True
+Hypertension,,0.039221178445883305,6,Regressão,True
+Physical_Activity_Level,,0.03843930389912156,7,Regressão,True
+Diet_Quality,,0.036334262628877,8,Regressão,True

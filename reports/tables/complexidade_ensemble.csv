@@ -1,0 +1,5 @@
+Modelo,Árvores,Nós totais,Profundidade máxima
+RF classificação,100,823112,29
+GB classificação,600,9000,3
+RF regressão,200,1592532,28
+GB regressão,200,1400,2
