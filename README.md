@@ -1,9 +1,9 @@
 # Avaliação Comparativa de Modelos de IA — Sistema Especialista, Árvore de Decisão e Ensembles
 
-**Aluno:** [preencher com nome completo]  
-**Matrícula:** [preencher com a matrícula]  
-**Dataset:** [link direto para o dataset utilizado]  
-**Repositório:** [link público do GitHub/GitLab]
+**Aluno:** Lucas da Costa Santos
+**Matrícula:** 20250038952
+**Dataset:** https://www.kaggle.com/datasets/srisyra02/diabetes-risk-prediction-dataset
+**Repositório da EDA e pre-processamento do Dataset:** https://github.com/lucascsantos07/diabetes-risk-analysis.git
 
 ## Descrição
 
@@ -31,7 +31,7 @@ nos mesmos conjuntos e cronometradas em sessões registradas em `logs/`.
 ├── README.md
 ├── requirements.txt
 ├── data/
-│   ├── raw/                         # dataset original (não versionado; ver link)
+│   ├── raw/                        
 │   └── processed/
 │       ├── dataset_classification.csv
 │       └── dataset_regression.csv
@@ -43,7 +43,7 @@ nos mesmos conjuntos e cronometradas em sessões registradas em `logs/`.
 │   ├── 07_generalization.ipynb
 │   ├── 08_computational_efficiency.ipynb
 │   ├── 09_comparative_analysis.ipynb
-│   └── archive/                     # notebooks exploratórios das etapas anteriores
+│   
 ├── src/
 │   ├── config.py
 │   ├── prepare_data.py
@@ -70,7 +70,6 @@ nos mesmos conjuntos e cronometradas em sessões registradas em `logs/`.
 ├── artifacts/
 │   └── models/                      # modelos treinados (.joblib)
 └── docs/                            # relatório final (PDF e HTML)
-```
 
 ## Como executar
 
@@ -79,7 +78,7 @@ dependências de `requirements.txt`.
 
 ```bash
 # 1. Clone o repositório
-git clone [URL_DO_REPOSITORIO]
+git clone https://github.com/lucascsantos07/analise-comparativa-modelos-ia.git
 cd avaliacao-comparativa-modelos-ia
 
 # 2. Crie e ative um ambiente virtual
@@ -203,7 +202,7 @@ O esforço humano registrado é:
 | Classificação | 3 | 8 (consolidadas em 4) | 152,45 min | Completo |
 | Regressão | 1 | 4 (v1) | 68,22 min | **Parcial** |
 
-> **Atenção:** a cronometragem da regressão está incompleta (1 de 3 sessões) e a
+> **Atenção:** a cronometragem da regressão 
 > versão v2 (19 faixas) não foi cronometrada. O valor de 68,22 min é um limite
 > inferior e se refere à v1. Consulte [`logs/README.md`](logs/README.md) para o
 > formato e para as sessões pendentes.
@@ -224,6 +223,3 @@ O esforço humano registrado é:
   permutation importance.
 - Resultados dependem do hardware e da versão das bibliotecas.
 
-## Contato
-
-[preencher e-mail institucional, se desejado]
