@@ -181,17 +181,6 @@ manual. A v1 é claramente inadequada e serve apenas como linha de base.
 - **Regressão:** Gradient Boosting como modelo principal; especialista v2 quando
   a explicabilidade/auditoria for obrigatória.
 
-## Relatório final
-
-O relatório técnico completo da atividade está em
-[`docs/relatorio_final.pdf`](docs/relatorio_final.pdf) (17 páginas), com versão
-HTML em [`docs/relatorio_final.html`](docs/relatorio_final.html). Ele cobre
-introdução, protocolo experimental, sistema especialista, árvore, ensembles,
-resultados, generalização, eficiência/energia, respostas às perguntas (a)–(f),
-limitações, conclusões e referências. Os campos de identificação e os links de
-dataset/repositório aparecem entre colchetes e devem ser preenchidos antes da
-entrega.
-
 ## Sistema especialista e cronometragem
 
 A base de classificação tem **4 regras** e usa apenas 3 variáveis (glicemia,
