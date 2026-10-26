@@ -1,8 +1,11 @@
 # Avaliação Comparativa de Modelos de IA — Sistema Especialista, Árvore de Decisão e Ensembles
 
-**Aluno:** Lucas da Costa Santos
+**Aluno:** Lucas da Costa Santos 
+
 **Matrícula:** 20250038952
+
 **Dataset:** https://www.kaggle.com/datasets/srisyra02/diabetes-risk-prediction-dataset
+
 **Repositório da EDA e pre-processamento do Dataset:** https://github.com/lucascsantos07/diabetes-risk-analysis.git
 
 ## Descrição
