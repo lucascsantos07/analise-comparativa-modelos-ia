@@ -6,8 +6,7 @@ pontuação aditiva: cada regra representa uma faixa clinicamente
 interpretável e contribui com pontos; o escore final é a soma à
 pontuação base, truncada em [0, 100].
 
-Os limiares vêm das diretrizes da ADA (glicemia e HbA1c) e de faixas
-clássicas de IMC e idade. Os pesos foram estimados por mínimos quadrados
+Os pesos foram estimados por mínimos quadrados
 (OLS) sobre os indicadores das faixas no conjunto de TREINO e arredondados
 para inteiros — o teste não participa da calibração.
 
@@ -19,7 +18,6 @@ pelas medianas do treino) para comparação no notebook 03.
 # Versão 2: motor de pontuação (19 regras)
 # ---------------------------------------------------------------------------
 REGRAS_REGRESSAO = [
-    # Glicemia de jejum — diretriz ADA
     {
         "id": "RG_G_BAIXA",
         "descricao": "Glicemia de jejum normal (< 100 mg/dL)",
@@ -27,7 +25,7 @@ REGRAS_REGRESSAO = [
             "Fasting_Blood_Sugar": {"operador": "<", "valor": 100},
         },
         "pontos": -10,
-        "tipo": "diretriz",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_G_PRE",
@@ -39,7 +37,7 @@ REGRAS_REGRESSAO = [
             },
         },
         "pontos": 0,
-        "tipo": "diretriz",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_G_ALTA",
@@ -48,9 +46,8 @@ REGRAS_REGRESSAO = [
             "Fasting_Blood_Sugar": {"operador": ">=", "valor": 126},
         },
         "pontos": 10,
-        "tipo": "diretriz",
+        "tipo": "heuristica",
     },
-    # HbA1c — diretriz ADA
     {
         "id": "RG_H_BAIXA",
         "descricao": "HbA1c normal (< 5,7%)",
@@ -58,7 +55,7 @@ REGRAS_REGRESSAO = [
             "HbA1c": {"operador": "<", "valor": 5.7},
         },
         "pontos": -9,
-        "tipo": "diretriz",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_H_PRE",
@@ -70,7 +67,7 @@ REGRAS_REGRESSAO = [
             },
         },
         "pontos": 0,
-        "tipo": "diretriz",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_H_ALTA",
@@ -79,7 +76,7 @@ REGRAS_REGRESSAO = [
             "HbA1c": {"operador": ">=", "valor": 6.5},
         },
         "pontos": 9,
-        "tipo": "diretriz",
+        "tipo": "heuristica",
     },
     # IMC — faixas clássicas de obesidade
     {
@@ -89,7 +86,7 @@ REGRAS_REGRESSAO = [
             "BMI": {"operador": "<", "valor": 25},
         },
         "pontos": -5,
-        "tipo": "relacao",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_IMC_SOBREPESO",
@@ -101,7 +98,7 @@ REGRAS_REGRESSAO = [
             },
         },
         "pontos": -2,
-        "tipo": "relacao",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_IMC_OBESO1",
@@ -113,7 +110,7 @@ REGRAS_REGRESSAO = [
             },
         },
         "pontos": 2,
-        "tipo": "relacao",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_IMC_OBESO2",
@@ -122,7 +119,7 @@ REGRAS_REGRESSAO = [
             "BMI": {"operador": ">=", "valor": 35},
         },
         "pontos": 5,
-        "tipo": "relacao",
+        "tipo": "heuristica",
     },
     # Idade — faixas heurísticas
     {
@@ -175,7 +172,7 @@ REGRAS_REGRESSAO = [
             "Family_History_Diabetes": {"operador": "==", "valor": "Yes"},
         },
         "pontos": 10,
-        "tipo": "relacao",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_HIPERTENSAO",
@@ -184,7 +181,7 @@ REGRAS_REGRESSAO = [
             "Hypertension": {"operador": "==", "valor": "Yes"},
         },
         "pontos": 6,
-        "tipo": "relacao",
+        "tipo": "heuristica",
     },
     {
         "id": "RG_DIETA_RUIM",

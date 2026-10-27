@@ -141,11 +141,3 @@ def resumo_cronometro(df: pd.DataFrame) -> pd.DataFrame:
 
     return pd.DataFrame(linhas)
 
-
-def sessoes_pendentes(df: pd.DataFrame, minimo: int = 3) -> dict[str, int]:
-    """Quantas sessões ainda faltam por problema (requisito da atividade)."""
-    contagem = df.groupby("problema")["sessao"].nunique()
-    return {
-        problema: max(0, minimo - int(contagem.get(problema, 0)))
-        for problema in ("classificacao", "regressao")
-    }
